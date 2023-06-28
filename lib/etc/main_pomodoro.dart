@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:toonflix/screens/home_screen.dart';
 
 void main() {
   runApp(const App());
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   const App({super.key});
 
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +26,9 @@ class App extends StatelessWidget {
         ),
         cardColor: const Color(0xFFF4EDDB),
       ),
-      home: const HomeScreen(),
+      home: const Scaffold(
+        body: Center(),
+      ),
     );
   }
 }
